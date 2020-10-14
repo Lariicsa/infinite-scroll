@@ -1,10 +1,10 @@
 <template>
-  <div :id="character.id" class="carditem">
-    <img v-if="character.image" :src="pathBase" />
+  <div class="carditem">
+    <!-- <img v-if="character.image" :src="pathBase" /> -->
     <div class="carditem__info">
-      <strong>{{ character.namechar }}</strong>
-      <span>{{ character.status }}</span>
-      <span>{{ character.specie }}</span>
+      <strong>{{ character.name.first }}</strong>
+      <span>{{ character.occupation }}</span>
+      <span>{{ character.species }}</span>
     </div>
   </div>
 </template>
