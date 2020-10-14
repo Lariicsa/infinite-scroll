@@ -17,9 +17,9 @@ export default new Vuex.Store({
     async getCharactersList({commit}) {
       try {
         const response = await characterAll()
-        const list = response.data.results
+        const list = response.data
         commit("setCharactersList", list)
-        console.log('all',response.data);
+        console.log('all',list);
       } catch (error) {
         console.log(error.response);
       }

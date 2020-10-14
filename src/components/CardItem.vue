@@ -15,7 +15,7 @@ export default {
 
   props: {
     character: {
-      type: Array,
+      type: Object,
     },
     index: Number,
     showPage: {

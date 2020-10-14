@@ -1,11 +1,11 @@
 <template>
   <div class="row center">
-    <p>{{cards}}</p>
+    <!-- <p>{{cards}}</p> -->
     <InfiniteScroll :showLoading="loading" @loadMore="loadMore()">
       <div class="row center">
         <CardItem
-          v-for="(character, index) in gtrCharacters"
-          :character="cards"
+          v-for="(character, index) in cards"
+          :character="character"
           :key="index"
           :index="parseInt(index + 1)"
         />
