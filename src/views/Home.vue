@@ -6,7 +6,7 @@
         <CardItem
           v-for="(character, index) in gtrCharacters"
           :character="cards"
-          :key="character.id"
+          :key="index"
           :index="parseInt(index + 1)"
         />
       </div>
@@ -49,7 +49,7 @@ export default {
   },
 
   methods: {
-    ...mapActions(["getCharactersList", "getCharactersDimension"]),
+    ...mapActions(["getCharactersList"]),
 
     loadMore() {
       const listItems = document.querySelector("#infinite-list");

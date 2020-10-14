@@ -1,0 +1,78 @@
+//icons
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace +
+      str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+  @return $string;
+}
+
+@mixin button($width, $type) {
+  border: 0.2rem solid transparent;
+  border-radius: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 2rem;
+  font-size: $medium-size;
+  font-weight: $regular;
+  text-decoration: none;
+  height: 4rem;
+  width: $width;
+  @include tablet {
+    width: 100%;
+  }
+  @if ($type == "primary") {
+    background: $turanga-lila;
+    color: $white-eye;
+    &:hover {
+      background-color: $turanga-lila;
+    }
+    &:active {
+      border: 0.2rem solid $turanga-lila;
+    }
+  } @else if ($type == "secondary") {
+    background-color: $white-eye;
+    border: 0.2rem solid $grey-glasses;
+    color: $black-universe;
+    &:hover {
+      border-color: $turanga-lila;
+      color: $turanga-lila;
+    }
+    &:active {
+      border-width: 0.2rem;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+//responsive
+@mixin desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: $tablet - 1px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: $mobile - 1px) {
+    @content;
+  }
+}
+
+@mixin lowmobile {
+  @media screen and (max-width: $mobile-low) {
+    @content;
+  }
+}

@@ -1,0 +1,13 @@
+.btn {
+  font-size: $medium-size;
+  text-decoration: none;
+
+  &__primary {
+    @extend .btn;
+    @include button(100%, "primary");
+  }
+  &__secondary {
+    @extend .btn;
+    @include button(auto, "secondary");
+  }
+}

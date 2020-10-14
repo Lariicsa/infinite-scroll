@@ -1,0 +1,44 @@
+//Font
+$bold: 700;
+$semibold: 500;
+$regular: 400;
+$font-primary: "Roboto", sans-serif;
+
+//Font-size
+$small-size: 1.2rem;
+$medium-size: 1.4rem;
+$regular-size: 1.6rem;
+$big-size: 2.1rem;
+$green-vue: #4fc08d;
+
+//Colors
+$orange-zoidberg: #ff545f;;
+$accent: $orange-zoidberg;
+$black-universe: #000c20;
+$grey-glasses: #b7D2ca;
+$grey-bender: #8cb4b7;
+$primary: #485b76;
+$turanga-lila: #781976;
+$white-eye: #ffffff;
+
+
+//Larges
+$large: 100%;
+$medium: 48%;
+$small: 31%;
+$maxwidth-containner: 1440px;
+$maxwidth-inner-containner: 1280px;
+
+//Breakpoints
+$mobile-low: 320px !default;
+$mobile: 475px !default;
+$tablet: 769px !default;
+$tablet-landscape: 1024px !default;
+$desktop: 1280px !default;
+
+//Rythms
+$global-padding: 0 1.6rem;
+$global-padding-mobile: 0 1.6rem;
+
+//Box
+$radius: 0.4rem;

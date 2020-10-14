@@ -1,0 +1,125 @@
+.infscroll {
+  &__container {
+    padding: 0;
+    background-color: $white-eye;
+    border-radius: 8px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  &__items {
+    padding-bottom: 4rem;
+    overflow: auto;
+    height: 100%;
+    max-height: 120rem;
+    width: 100%;
+    &::-webkit-scrollbar {
+      width: 0rem;
+    }
+    &:scrollbar {
+      width: 0rem;
+    }
+  }
+
+  &__list {
+    border-radius: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: relative;
+    overflow-y: scroll;
+    height: auto;
+    width: 6.4rem;
+
+    & > li {
+      background-color: rgba($white-eye, 0.6);
+      border-radius: 0.4rem;
+      margin: 0.2rem 0;
+      padding: 0.2rem;
+      font-size: 1.8rem;
+      text-align: center;
+      width: 6.4rem;
+      cursor: pointer;
+      & > a {
+        text-decoration: none;
+      }
+      &.current {
+        & > a {
+          color: $black-universe;
+          font-weight: bold;
+        }
+      }
+    }
+
+    &-out {
+      border-radius: $radius;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      display: flex;
+      width: auto;
+      position: fixed;
+      top: 12rem;
+      right: 0;
+      height: auto;
+      max-height: 15.6rem;
+      z-index: 99;
+      overflow-y: hidden;
+    }
+
+    &-wrapper {
+      position: relative;
+    }
+  }
+
+  &__loader {
+    background: $orange-zoidberg;
+    border-radius: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -2.4rem 0 0 -8rem;
+    text-align: center;
+    font-weight: $semibold;
+    color: $white-eye;
+    height: 3.2rem;
+    width: 16rem;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    z-index: 99;
+    @include tablet {
+      bottom: 50%;
+    }
+
+    &-bg {
+      background-color: rgba($white-eye, 0.8);
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 99;
+      height: 100%;
+      width: 100%;
+      @include tablet {
+        position: fixed;
+        top: 6.4rem;
+      }
+    }
+  }
+
+  &.btn__secondary {
+    margin-top: 2.4rem;
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
