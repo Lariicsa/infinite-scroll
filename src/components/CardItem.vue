@@ -1,13 +1,5 @@
 <template>
-  <div :id="id" class="carditem">
-    <div
-      v-show="showPage"
-      :id="'pagina' + parseInt(index / items + 1)"
-      class="carditem__page"
-      v-if="index % items === 0 || index === 1"
-    >
-      Page {{ parseInt(index / items + 1) }}
-    </div>
+  <div :id="character.id" class="carditem">
     <img v-if="character.image" :src="pathBase" />
     <div class="carditem__info">
       <strong>{{ character.namechar }}</strong>
@@ -23,8 +15,7 @@ export default {
 
   props: {
     character: {
-      type: Object,
-      required: true,
+      type: Array,
     },
     index: Number,
     showPage: {

@@ -1,16 +1,16 @@
 <template>
   <div class="row center">
     <p>{{cards}}</p>
-    <!-- <InfiniteScroll :showLoading="loading" @loadMore="loadMore()">
+    <InfiniteScroll :showLoading="loading" @loadMore="loadMore()">
       <div class="row center">
         <CardItem
-          v-for="(product, index) in gtrCharacters"
-          :items="6"
-          :key="product.id"
+          v-for="(character, index) in gtrCharacters"
+          :character="cards"
+          :key="character.id"
           :index="parseInt(index + 1)"
         />
       </div>
-    </InfiniteScroll> -->
+    </InfiniteScroll>
   </div>
 </template>
 <script>
@@ -46,7 +46,6 @@ export default {
 
   mounted() {
     this.cards;
-    this.currPag;
   },
 
   methods: {
