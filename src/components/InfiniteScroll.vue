@@ -32,7 +32,7 @@ export default {
     },
     textLoading: {
       type: String,
-      default: "Cargando ...",
+      default: "Loading ...",
     },
   },
 

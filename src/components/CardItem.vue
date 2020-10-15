@@ -1,8 +1,10 @@
 <template>
   <div class="carditem">
-    <img :src="pathBase+'futurama'+character.id+'.jpg'" />
+    <div class="carditem__image">
+      <img :src="pathBase+'futurama'+character.id+'.jpg'" />
+    </div>
     <div class="carditem__info">
-      <strong>{{ character.name.first }}</strong>
+      <strong class="carditem__title">{{ character.name.first }} {{ character.name.last }}</strong>
       <span>{{ character.occupation }}</span>
       <span>{{ character.species }}</span>
     </div>

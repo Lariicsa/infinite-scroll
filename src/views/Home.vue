@@ -1,30 +1,32 @@
 <template>
-  <div class="row center">
-    <ul>
-      <li v-for="n in gtrCharacters" :key="n.id">{{n.name.first}} {{n.id}} </li>
-    </ul>
-    <InfiniteScroll :showLoading="loading" @loadMore="loadMore()">
-      <div class="row center">
-        <CardItem
-          v-for="(character, index) in cards"
-          :character="character"
-          :key="index"
-          :index="parseInt(index + 1)"
-        />
-      </div>
-    </InfiniteScroll>
+  <div class="container">
+    <div class="row center">
+      <h1>Futurama <span>{{cards.length}} from {{gtrCharacters.length}}</span></h1>
+    </div>
+    <div class="row center">
+      <InfiniteScroll :showLoading="loading" @loadMore="loadMore()">
+        <div class="row between">
+          <CardItem
+            v-for="(character, index) in cards"
+            :character="character"
+            :key="index"
+            :index="parseInt(index + 1)"
+          />
+        </div>
+      </InfiniteScroll>
+    </div>
   </div>
 </template>
 <script>
 import { mapActions, mapGetters, mapState, mapMutations } from "vuex";
 import CardItem from "@/components/CardItem";
-import InfiniteScroll from "@/components/InfiniteScroll"
+import InfiniteScroll from "@/components/InfiniteScroll";
 
 export default {
   name: "Home",
   components: {
     CardItem,
-    InfiniteScroll
+    InfiniteScroll,
   },
 
   data() {

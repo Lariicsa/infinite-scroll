@@ -34,6 +34,13 @@ h5 {
   font-weight: $bold;
 }
 
+h1 {
+  font-size: 5.6rem;
+  font-family: $font-secondary;
+  color: $orange-zoidberg;
+  margin: 1.6rem 0;
+}
+
 h2 {
   font-size: $big-size;
   color: $black-universe;
@@ -58,7 +65,7 @@ select {
 }
 
 .space {
-  background-color: $white-eye;
+  background-color: $black-universe;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -68,6 +75,21 @@ select {
   min-height: 100vh;
   flex-wrap: wrap;
   z-index: 0;
+}
+
+.wrapper {
+  background-color: $black-universe;
+  display: flex;
+  padding: 0;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  @include tablet {
+    padding-top: 7rem;
+  }
 }
 
 .container {
@@ -172,18 +194,4 @@ hr {
   overflow: visible;
   border: none;
   width: 100%;
-}
-
-.wrapper {
-  display: flex;
-  padding: 0;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
-  @include tablet {
-    padding-top: 7rem;
-  }
 }
