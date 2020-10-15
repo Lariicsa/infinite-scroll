@@ -1,4 +1,4 @@
-# scroll-pages
+# Infinite Scroll component
 
 ## Project setup
 ```
