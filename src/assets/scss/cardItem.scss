@@ -16,6 +16,8 @@
     align-items: center;
     flex-direction: column;
     padding: 2.4rem 1.6rem;
+    width: 100%;
+    margin: 4rem auto;
   }
   &__image {
     background-color: $grey-bender;
@@ -55,7 +57,7 @@
   &__title {
     font-size: $big-size;
     font-family: $font-secondary;
-    color: $grey-bender;
+    color: $turanga-lila;
     text-indent: 0.1rem;
     text-align: left;
     margin: 0.8rem 0;

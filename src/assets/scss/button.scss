@@ -5,6 +5,8 @@
   &__primary {
     @extend .btn;
     @include button(100%, "primary");
+    max-width: 40rem;
+    margin: 0 auto;
   }
   &__secondary {
     @extend .btn;

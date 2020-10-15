@@ -35,10 +35,15 @@ h5 {
 }
 
 h1 {
+  margin: 1.6rem auto;
   font-size: 5.6rem;
   font-family: $font-secondary;
   color: $orange-zoidberg;
-  margin: 1.6rem 0;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  & > span {
+    color: $grey-glasses;
+  }
 }
 
 h2 {

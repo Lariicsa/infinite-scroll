@@ -10,8 +10,8 @@
       <ButtonFan
         v-show="isMobile"
         @btnClick="loadMore()"
-        text="Cargar más ..."
-        ui="secondary infscroll"
+        text="Load more ..."
+        ui="primary infscroll"
       />
     </div>
   </div>

@@ -76,7 +76,7 @@
 
   &__loader {
     background: $orange-zoidberg;
-    border-radius: 4rem;
+    border-radius: 10rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,11 +84,11 @@
     text-align: center;
     font-weight: $semibold;
     color: $white-eye;
-    height: 3.2rem;
-    width: 16rem;
+    height: 10rem;
+    width: 10rem;
     position: absolute;
     left: 50%;
-    bottom: 10%;
+    top: 50%;
     z-index: 99;
     @include tablet {
       bottom: 50%;
