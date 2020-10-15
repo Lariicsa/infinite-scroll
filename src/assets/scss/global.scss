@@ -35,14 +35,22 @@ h5 {
 }
 
 h1 {
+  display: flex;
   margin: 1.6rem auto;
   font-size: 5.6rem;
   font-family: $font-secondary;
   color: $orange-zoidberg;
   letter-spacing: 0.2rem;
   text-align: center;
+  height: auto;
+  max-height: 10rem;
   & > span {
     color: $grey-glasses;
+  }
+
+  @include tablet {
+    margin: 0.8rem auto;
+    flex-direction: column;
   }
 }
 
@@ -77,7 +85,6 @@ select {
   align-items: center;
   width: 100%;
   position: relative;
-  min-height: 100vh;
   flex-wrap: wrap;
   z-index: 0;
 }
@@ -93,7 +100,7 @@ select {
   width: 100%;
   height: 100%;
   @include tablet {
-    padding-top: 7rem;
+    padding-top: 2rem;
   }
 }
 
@@ -104,6 +111,7 @@ select {
   width: 100%;
   max-width: $maxwidth-containner;
   flex-wrap: wrap;
+  min-height: 100vh;
   @include tablet {
     padding: 0 1.6rem;
   }
