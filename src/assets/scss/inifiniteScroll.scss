@@ -2,7 +2,6 @@
   &__container {
     padding: 0;
     background-color: $white-eye;
-    border-radius: 8px;
     margin: 0 auto;
     width: 100%;
   }
@@ -11,7 +10,7 @@
     padding-bottom: 4rem;
     overflow: auto;
     height: 100%;
-    max-height: 120rem;
+    max-height: 64rem;
     width: 100%;
     &::-webkit-scrollbar {
       width: 0rem;

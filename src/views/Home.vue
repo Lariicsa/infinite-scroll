@@ -1,6 +1,8 @@
 <template>
   <div class="row center">
-    <!-- <p>{{cards}}</p> -->
+    <ul>
+      <li v-for="n in gtrCharacters" :key="n.id">{{n.name.first}} {{n.id}} </li>
+    </ul>
     <InfiniteScroll :showLoading="loading" @loadMore="loadMore()">
       <div class="row center">
         <CardItem
@@ -37,7 +39,7 @@ export default {
   },
 
   static: {
-    limitItems: 6,
+    limitScrollItems: 6,
   },
 
   async created() {

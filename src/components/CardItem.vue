@@ -1,6 +1,6 @@
 <template>
   <div class="carditem">
-    <!-- <img v-if="character.image" :src="pathBase" /> -->
+    <img :src="pathBase+'futurama'+character.id+'.jpg'" />
     <div class="carditem__info">
       <strong>{{ character.name.first }}</strong>
       <span>{{ character.occupation }}</span>
@@ -25,7 +25,23 @@ export default {
   },
   data() {
     return {
-      pathBase: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+      pathBase: "https://res.cloudinary.com/lariicsa/image/upload/v1602727260/futurama/",
+      charImages: [
+        { name: "Philip", url: "" },
+        { name: "Turanga", url: "" },
+        { name: "Bender", url: "futurama4_pxj04y.jpg" },
+        { name: "Hubert", url: "" },
+        { name: "Amy", url: "" },
+        { name: "Hermes", url: "" },
+        { name: "Carol", url: "" },
+        { name: "John", url: "" },
+        { name: "Zapp", url: "" },
+        { name: "Scruffy", url: "" },
+        { name: "Cubert", url: "" },
+        { name: "Kif", url: "" },
+        { name: "Dwight", url: "" },
+        { name: "LaBarbara", url: "" },
+      ],
     };
   },
 
