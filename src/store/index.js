@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { characterInfo, characterAll } from "../../service/index"
+import { characterInfo, characterAll } from "../service/index"
 
 Vue.use(Vuex)
 
