@@ -4,7 +4,7 @@ const headers = {
 };
 
 const baseURL = () => {
-  (axios.defaults.baseURL = "https://sampleapis.com/futurama/api"), headers;
+  (axios.defaults.baseURL = "https://api.sampleapis.com/futurama"), headers;
 };
 
 const FUTURAMA_SERVICE = axios.create(baseURL());
